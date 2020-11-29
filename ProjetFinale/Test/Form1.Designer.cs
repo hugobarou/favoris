@@ -1,4 +1,4 @@
-﻿namespace FavoriteTests
+﻿namespace Test
 {
     partial class Form1
     {

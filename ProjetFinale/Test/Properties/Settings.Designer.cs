@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FavoriteTests.Properties
+namespace Test.Properties
 {
 
 
