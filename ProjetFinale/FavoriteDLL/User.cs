@@ -17,6 +17,19 @@ namespace FavoriteDLL
         [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public User(int p_id, string p_firstName, string p_lastName, string p_email, string p_password)
+        {
+            id = p_id;
+            firstName = p_firstName;
+            lastName = p_lastName;
+            email = p_email;
+            password = p_password;
+        }
+        public User()
+        {
+
+        }
+
         private void NotifyPropertyChanged(string propriete)
         {
             if (PropertyChanged != null)
@@ -79,6 +92,10 @@ namespace FavoriteDLL
                     _password = value;
                 NotifyPropertyChanged("password");
             }
+        }
+        public override string ToString()
+        {
+            return id + ";" + firstName + ";" + lastName + ";" + email + ";" + password;
         }
     }
 }

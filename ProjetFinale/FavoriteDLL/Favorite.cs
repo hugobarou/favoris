@@ -70,5 +70,9 @@ namespace FavoriteDLL
                 NotifyPropertyChanged("url");
             }
         }
+        public override string ToString()
+        {
+            return id + ";" + name + ";" + url + ";" + folderId;
+        }
     }
 }

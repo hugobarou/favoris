@@ -75,5 +75,9 @@ namespace FavoriteDLL
                 NotifyPropertyChanged("lstFavorite");
             }
         }
+        public override string ToString()
+        {
+            return id + ";" + name + ";" + userId;
+        }
     }
 }
