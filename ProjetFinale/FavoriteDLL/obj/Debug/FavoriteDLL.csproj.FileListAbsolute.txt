@@ -1,0 +1,2 @@
+D:\Dev\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.csprojAssemblyReference.cache
+D:\Dev\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.csproj.CoreCompileInputs.cache
