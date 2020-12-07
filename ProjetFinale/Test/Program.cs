@@ -68,9 +68,25 @@ namespace Test
 
             DBConnect db = new DBConnect();
             List<User> lst = db.selectAllUser();
-            foreach(User u in lst)
+            foreach (User u in lst)
             {
                 Console.WriteLine(u);
+            }
+            User jc = new User();
+            jc.id = 1;
+
+            List<Folder> lstFolder =  db.selectAllFolderByUser(jc);
+            foreach (Folder f in lstFolder)
+            {
+                Console.WriteLine(f);
+            }
+
+            Folder test = new Folder();
+            test.id = 1;
+            List<Favorite> lstFav = db.selectAllFavoriteByFolder(test);
+            foreach (Favorite fav in lstFav)
+            {
+                Console.WriteLine(fav);
             }
         }
     }

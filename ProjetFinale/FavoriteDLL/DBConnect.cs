@@ -12,7 +12,7 @@ namespace FavoriteDLL
 {
     public class DBConnect
     {
-        private DbConnection connection;
+        private MySqlConnection connection;
         private string connectionString;
         private string server;
         private string database;
@@ -28,7 +28,6 @@ namespace FavoriteDLL
             database = "projet_finale";
             uid = "root";
             password = "root";
-
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             connection = new MySqlConnection(connectionString);
         }
@@ -67,44 +66,106 @@ namespace FavoriteDLL
                 return false;
             }
         }
-        public void Insert()
+        public void insertUser(User u)
         {
+            string query = "INSERT INTO user (firstName, lastName, email, password) VALUES (@firstName,@lastName,@email,@password)";
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@firstName", u.firstName);
+                cmd.Parameters.AddWithValue("@lastName", u.lastName);
+                cmd.Parameters.AddWithValue("@email", u.email);
+                cmd.Parameters.AddWithValue("@password", u.password);
+                int result = cmd.ExecuteNonQuery();
+                Debug.WriteLine("Insert worked for:"+u.firstName);
+
+            }
+            catch (MySqlException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            this.CloseConnection();
         }
         public List<User> selectAllUser()
         {
             string query = "SELECT * FROM user";
             List<User> lst = new List<User>();
 
-            if (this.OpenConnection() == true)
+            try
             {
-                DbCommand cmd = connection.CreateCommand();
-                cmd.CommandText = query;
-                cmd.CommandType = CommandType.Text;
-                DbDataReader dr = cmd.ExecuteReader();
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     User u = new User(dr.GetInt32(0), dr["firstName"].ToString(), dr["lastName"].ToString(), dr["email"].ToString(), dr["password"].ToString());
                     lst.Add(u);
                 }
                 dr.Close();
+                Debug.WriteLine("selectAllUser worked");
+
+            }
+            catch (MySqlException ex)
+            {
+                Debug.WriteLine(ex.Message);
             }
             this.CloseConnection();
             return lst;
         }
         public List<Folder> selectAllFolderByUser(User u)
         {
+            string query = "SELECT * FROM folder WHERE userId = @userId";
             List<Folder> lst = new List<Folder>();
 
-            return lst;
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@userId", u.id);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Folder f = new Folder(dr.GetInt32(0), dr["folderName"].ToString(), dr.GetInt32(2));
+                    lst.Add(f);
+                }
+                dr.Close();
+                Debug.WriteLine("selectAllFolderByUser worked");
 
+            }
+            catch (MySqlException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            this.CloseConnection();
+            return lst;
         }
-        public List<Favorite> selectAllFavoriteByUser(User u)
+        public List<Favorite> selectAllFavoriteByFolder(Folder f)
         {
+            string query = "SELECT * FROM favorite WHERE folderId = @folderId";
             List<Favorite> lst = new List<Favorite>();
 
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@folderId", f.id);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Favorite fav = new Favorite(dr.GetInt32(0), dr["favoriteName"].ToString(), dr["url"].ToString(), dr.GetInt32(3));
+                    lst.Add(fav);
+                }
+                dr.Close();
+                Debug.WriteLine("selectAllFavoriteByFolder worked");
+
+            }
+            catch (MySqlException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            this.CloseConnection();
             return lst;
         }
-
-
     }
 }

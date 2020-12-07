@@ -17,7 +17,16 @@ namespace FavoriteDLL
 
         [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
+        public Folder(int p_id, string p_name, int p_userId)
+        {
+            id = p_id;
+            name = p_name;
+            userId = p_userId;
+        }
+        public Folder()
+        {
 
+        }
         private void NotifyPropertyChanged(string propriete)
         {
             if (PropertyChanged != null)

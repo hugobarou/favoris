@@ -16,7 +16,17 @@ namespace FavoriteDLL
 
         [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
+        public Favorite(int p_id, string p_name, string p_url, int p_folderId)
+        {
+            id = p_id;
+            name = p_name;
+            url = p_url;
+            folderId = p_folderId;
+        }
+        public Favorite()
+        {
 
+        }
         private void NotifyPropertyChanged(string propriete)
         {
             if (PropertyChanged != null)
