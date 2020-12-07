@@ -94,6 +94,20 @@ namespace Test
 
             Folder fol = new Folder(15, "Ceci est un test folder",1);
             db.insertFolder(fol);
+
+            fa.id = 1;
+            fol.id = 3;
+            db.deleteFavorite(fa);
+            db.deleteFolder(fol);
+
+            fa.id = 2;
+            fa.name = "wow";
+            fa.url = "www.wow.com";
+            db.updateFavorite(fa);
+
+            fol.id = 2;
+            fol.name = "C'EST VRAIMENT TROP COOL LA PROGRAMMATION";
+            db.updateFolder(fol);
         }
     }
 }
