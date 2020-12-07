@@ -27,7 +27,7 @@ namespace FavoriteDLL
             server = "127.0.0.1";
             database = "projet_finale";
             uid = "root";
-            password = "root";
+            password = "2541abcd";
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             connection = new MySqlConnection(connectionString);
         }
@@ -87,6 +87,48 @@ namespace FavoriteDLL
             }
             this.CloseConnection();
         }
+
+        public void insertFolder(Folder f)
+        {
+            string query = "INSERT INTO folder (folderName, userId) VALUES (@folderName, @userId)";
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@folderName", f.name);
+                cmd.Parameters.AddWithValue("@userId", f.userId);
+                int result = cmd.ExecuteNonQuery();
+                Debug.WriteLine("Insert worked for folder:" + f.name);
+            }
+            catch(MySqlException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            this.CloseConnection();
+
+        }
+
+        public void insertFavorite(Favorite f)
+        {
+            string query = "INSERT INTO favorite (favoriteName, url, folderId) VALUES (@favoriteName, @url, @folderId)";
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@favoriteName", f.name);
+                cmd.Parameters.AddWithValue("@url", f.url);
+                cmd.Parameters.AddWithValue("@folderId", f.folderId);
+                int result = cmd.ExecuteNonQuery();
+                Debug.WriteLine("Insert worked for favorite:" + f.name);
+            }
+            catch (MySqlException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            this.CloseConnection();
+
+        }
+
         public List<User> selectAllUser()
         {
             string query = "SELECT * FROM user";

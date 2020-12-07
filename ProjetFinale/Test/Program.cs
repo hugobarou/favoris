@@ -88,6 +88,12 @@ namespace Test
             {
                 Console.WriteLine(fav);
             }
+
+            Favorite fa = new Favorite(28, "Ceci est un test", "www.runescape.com", 1);
+            db.insertFavorite(fa);
+
+            Folder fol = new Folder(15, "Ceci est un test folder",1);
+            db.insertFolder(fol);
         }
     }
 }

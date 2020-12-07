@@ -17,3 +17,9 @@ D:\Dev\finalprojectc\ProjetFinale\FavoriteDLL\bin\Debug\MySql.Data.xml
 D:\Dev\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.csproj.CopyComplete
 D:\Dev\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.dll
 D:\Dev\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.pdb
+F:\AAProject\finalprojectc\ProjetFinale\FavoriteDLL\bin\Debug\FavoriteDLL.dll
+F:\AAProject\finalprojectc\ProjetFinale\FavoriteDLL\bin\Debug\FavoriteDLL.pdb
+F:\AAProject\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.csproj.CoreCompileInputs.cache
+F:\AAProject\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.csproj.CopyComplete
+F:\AAProject\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.dll
+F:\AAProject\finalprojectc\ProjetFinale\FavoriteDLL\obj\Debug\FavoriteDLL.pdb
