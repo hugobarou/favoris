@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Acceuil.aspx" />
+    <Content Include="AffichageFavoris.aspx" />
     <Content Include="css\app.css" />
     <Content Include="Global.asax" />
     <Content Include="SignIn.aspx" />
@@ -84,6 +85,13 @@
     </Compile>
     <Compile Include="Acceuil.aspx.designer.cs">
       <DependentUpon>Acceuil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AffichageFavoris.aspx.cs">
+      <DependentUpon>AffichageFavoris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AffichageFavoris.aspx.designer.cs">
+      <DependentUpon>AffichageFavoris.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
