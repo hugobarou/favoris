@@ -3,16 +3,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    
+
+    
     <div class="container main-cover">
-        <%--<asp:DropDownList ID="DropDownList1" runat="server">
-            <asp:ListItem Selected="True" Value="White"> White </asp:ListItem>
-            <asp:ListItem Value="Silver"> Silver </asp:ListItem>
-            <asp:ListItem Value="DarkGray"> Dark Gray </asp:ListItem>
-            <asp:ListItem Value="Khaki"> Khaki </asp:ListItem>
-            <asp:ListItem Value="DarkKhaki"> Dark Khaki </asp:ListItem>
-        </asp:DropDownList>--%>
+        
+        <div class="row btn-row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <button type="button" class="btn btn-pill btn-success btn-lg btn-add">
+                    <i class="fas fa-plus"></i>
+                    Ajouter un dossier
+                </button>
+            </div>
+        </div>
+
         <div class="row folders-row">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <a href="google.com" class="clickable-card">
                     <div class="card">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/OneDrive_Folder_Icon.svg" class="card-img-top" alt="...">
@@ -23,7 +30,7 @@
                 </a>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <a href="google.com" class="clickable-card">
                     <div class="card">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/OneDrive_Folder_Icon.svg" class="card-img-top" alt="...">
@@ -34,7 +41,42 @@
                 </a>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="google.com" class="clickable-card">
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/OneDrive_Folder_Icon.svg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="google.com" class="clickable-card">
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/OneDrive_Folder_Icon.svg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        <%--</div>--%>
+        <%--<div class="row folders-row">--%>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="google.com" class="clickable-card">
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/OneDrive_Folder_Icon.svg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <a href="google.com" class="clickable-card">
                     <div class="card">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/OneDrive_Folder_Icon.svg" class="card-img-top" alt="...">
@@ -46,19 +88,13 @@
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-12 col-lg-4">
-                <a href="google.com" class="clickable-card">
-                    <div class="card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/OneDrive_Folder_Icon.svg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </a>
+        <div class="row btn-row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <button type="button" class="btn btn-pill btn-success btn-lg btn-add">
+                    <i class="fas fa-plus"></i>
+                    Ajouter un favoris
+                </button>
             </div>
-
-
         </div>
         <ul class="list-group list-group-horizontal">
             <li class="list-group-item ">
@@ -66,8 +102,7 @@
             </li>
             <li class="list-group-item flex-fill">google</li>
             <li class="list-group-item flex-fill">
-                <a href="https://www.google.com/"  target="_blank">
-                    https://www.google.com/
+                <a href="https://www.google.com/" target="_blank">https://www.google.com/
                 </a>
             </li>
             <li class="list-group-item">
@@ -80,8 +115,7 @@
             </li>
             <li class="list-group-item flex-fill">google</li>
             <li class="list-group-item flex-fill">
-                <a href="https://www.google.com/"  target="_blank">
-                    https://www.google.com/
+                <a href="https://www.google.com/" target="_blank">https://www.google.com/
                 </a>
             </li>
             <li class="list-group-item">
@@ -94,8 +128,7 @@
             </li>
             <li class="list-group-item flex-fill">google</li>
             <li class="list-group-item flex-fill">
-                <a href="https://www.google.com/"  target="_blank">
-                    https://www.google.com/
+                <a href="https://www.google.com/" target="_blank">https://www.google.com/
                 </a>
             </li>
             <li class="list-group-item">

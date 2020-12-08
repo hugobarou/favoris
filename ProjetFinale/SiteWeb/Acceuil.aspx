@@ -13,7 +13,7 @@
     </main>--%>
     
 
-    <div class="container main-cover">
+    <div class="container home-cover">
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
                 <h1>Acceuil.</h1>
