@@ -10,13 +10,11 @@
                     <img class="mb-4 sign-icon" src="https://www.pinclipart.com/picdir/middle/124-1244578_user-login-man-human-body-mobile-person-comments.png" >
                     <h1 class="h3 mb-3 fw-normal">Veuillez vous connecter</h1>
                     
-                    <label for="inputEmail" class="visually-hidden">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Adresse courriel" required autofocus>
-                    
-                    <label for="inputPassword" class="visually-hidden">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                    <asp:TextBox ID="inputEmail" class="form-control" placeholder="Adresse courriel" runat="server"></asp:TextBox>
 
-                    <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Connexion" class="w-100 btn btn-lg btn-primary"/>
+                    <asp:TextBox ID="inputPassword" class="form-control" placeholder="Mot de passe" runat="server"></asp:TextBox>
+
+                    <asp:Button ID="btnConnexion" runat="server" OnClick="connexionUser" Text="Connexion" class="w-100 btn btn-lg btn-primary"/>
                 </form>
                 </main>
             </div>
