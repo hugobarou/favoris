@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx" Inherits="SiteWeb.WebForm1" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="SiteWeb.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -17,9 +16,9 @@
                     <label for="inputPassword" class="visually-hidden">Password</label>
                     <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
 
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Connexion</button>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Connexion" class="w-100 btn btn-lg btn-primary"/>
                 </form>
-                    </main>
+                </main>
             </div>
         </div>
     </div>

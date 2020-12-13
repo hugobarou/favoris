@@ -7,63 +7,83 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TP1Web {
-    
-    
-    public partial class WebForm2 {
-        
+namespace SiteWeb
+{
+
+
+    public partial class WebForm2
+    {
+
         /// <summary>
-        /// lblError control.
+        /// lblFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
-        
+        protected global::System.Web.UI.WebControls.Label lblFirstName;
+
         /// <summary>
-        /// lblSes control.
+        /// inputFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSes;
-        
+        protected global::System.Web.UI.WebControls.TextBox inputFirstName;
+
         /// <summary>
-        /// lblC control.
+        /// lblLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblC;
-        
+        protected global::System.Web.UI.WebControls.Label lblLastName;
+
         /// <summary>
-        /// lblG control.
+        /// inputLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblG;
-        
+        protected global::System.Web.UI.WebControls.TextBox inputLastName;
+
         /// <summary>
-        /// gridE control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridE;
-        
+        protected global::System.Web.UI.WebControls.Label lblEmail;
+
         /// <summary>
-        /// gridR control.
+        /// inputEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridR;
+        protected global::System.Web.UI.WebControls.TextBox inputEmail;
+
+        /// <summary>
+        /// lblPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPassword;
+
+        /// <summary>
+        /// btnCreateUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCreateUser;
     }
 }

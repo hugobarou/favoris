@@ -18,7 +18,7 @@
                 <a class="navbar-brand">Favoris</a>
                 <div class="d-flex nav-items">
                     <a class="nav-link active" aria-current="page" href="Acceuil.aspx">Acceuil</a>
-                    <a class="nav-link active" aria-current="page" href="AffichageFavoris.aspx">Test</a>
+                    <a class="nav-link active" aria-current="page" href="AffichageFavoris.aspx">Favoris</a>
                     <a class="btn btn-outline-primary nav-item" href="SignUp.aspx">S'enregistrer</a>
                     <a class="btn btn-outline-success nav-item" href="SignIn.aspx">Se connecter</a>
                 </div>

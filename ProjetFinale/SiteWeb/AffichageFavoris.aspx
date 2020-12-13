@@ -1,12 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AffichageFavoris.aspx" Inherits="SiteWeb.WebForm1" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AffichageFavoris.aspx.cs" Inherits="SiteWeb.WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    
-
-    
     <div class="container main-cover">
         
         <div class="row btn-row">
@@ -135,7 +130,5 @@
                 <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
             </li>
         </ul>
-
-
     </div>
 </asp:Content>

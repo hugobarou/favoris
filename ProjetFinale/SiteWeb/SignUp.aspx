@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx" Inherits="SiteWeb.WebForm1" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="SiteWeb.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -12,19 +11,18 @@
                         <img class="mb-4 sign-icon" src="https://static.thenounproject.com/png/736670-200.png">
                         <h1 class="h3 mb-3 fw-normal">Veuillez vous enregistrer</h1>
 
-                        <label for="inputFirstName" class="visually-hidden">First name</label>
-                        <input id="inputFirstName" class="form-control" placeholder="Prénom" required>
+                        <asp:Label ID="lblFirstName" class="visually-hidden" runat="server" Text="First name"></asp:Label>
+                        <asp:TextBox ID="inputFirstName" class="form-control" placeholder="Prénom" runat="server"></asp:TextBox>
 
-                        <label for="inputLastName" class="visually-hidden">Last name</label>
-                        <input id="inputLastName" class="form-control" placeholder="Nom" required>
+                        <asp:Label ID="lblLastName" class="visually-hidden" runat="server" Text="Last name"></asp:Label>
+                        <asp:TextBox ID="inputLastName" class="form-control" placeholder="Nom" runat="server"></asp:TextBox>
 
-                        <label for="inputEmail" class="visually-hidden">Email address</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Adresse courriel" required>
+                        <asp:Label ID="lblEmail" class="visually-hidden" runat="server" Text="Email address"></asp:Label>
+                        <asp:TextBox ID="inputEmail" type="email" class="form-control" placeholder="Adresse courriel" runat="server"></asp:TextBox>
 
-                        <label for="inputPassword" class="visually-hidden">Password</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                        <asp:Label ID="lblPassword" class="visually-hidden" runat="server" Text="Password"></asp:Label>
 
-                        <button class="w-100 btn btn-lg btn-primary" type="submit">S'enregistrer</button>
+                        <asp:Button ID="btnCreateUser" runat="server" OnClick="createUser" Text="S'enregistrer" class="w-100 btn btn-lg btn-primary" />
                     </form>
                 </main>
             </div>
