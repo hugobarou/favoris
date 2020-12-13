@@ -13,7 +13,8 @@
 
                         <asp:TextBox ID="inputFirstName" class="form-control" placeholder="Prénom" runat="server"></asp:TextBox>
                         <asp:TextBox ID="inputLastName" class="form-control" placeholder="Nom" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="inputEmail" type="email" class="form-control" placeholder="Adresse courriel" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="inputEmail" class="form-control" placeholder="Adresse courriel" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="inputPassword" class="form-control" placeholder="Password" runat="server"></asp:TextBox>
                         <asp:Button ID="btnCreateUser" runat="server" OnClick="createUser" Text="S'enregistrer" class="w-100 btn btn-lg btn-primary" />
                     </form>
                 </main>

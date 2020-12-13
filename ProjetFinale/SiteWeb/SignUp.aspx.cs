@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FavoriteDLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,7 @@ namespace SiteWeb
         }
         protected void createUser(object sender, EventArgs e)
         {
-
+            User u = new User();
         }
     }
 }
