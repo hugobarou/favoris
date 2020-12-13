@@ -12,11 +12,23 @@ namespace SiteWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
         protected void createUser(object sender, EventArgs e)
         {
-            User u = new User();
+            if (Page.IsValid)
+            {
+                DBConnect db = new DBConnect();
+                User u = new User();
+                u.firstName = inputFirstName.Text;
+                u.lastName = inputLastName.Text;
+                u.email = inputEmail.Text;
+                u.password = inputPassword.Text;
+
+                db.insertUser(u);
+                Response.Redirect("SignIn.aspx");
+            }
+
         }
     }
 }

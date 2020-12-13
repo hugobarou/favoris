@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FavoriteDLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,11 @@ namespace SiteWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["connected"] != null)
+            {
+                User u = (User)Session["connected"];
+                lblWelcome.Text = "Welcome " + u.firstName + " " + u.lastName;
+            }
         }
     }
 }

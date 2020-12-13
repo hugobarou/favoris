@@ -88,23 +88,29 @@ namespace FavoriteDLL
             }
             this.CloseConnection();
         }
-        public List<User> selectAllUser()
+        public bool userExist(User u)
         {
-            string query = "SELECT * FROM user";
-            List<User> lst = new List<User>();
+            string query = "SELECT * FROM user WHERE email = @email AND password = @password";
+            bool result = false;
+            int nbUser = 0;
 
             try
             {
                 this.OpenConnection();
                 MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("email", u.email);
+                cmd.Parameters.AddWithValue("password", u.password);
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    User u = new User(dr.GetInt32(0), dr["firstName"].ToString(), dr["lastName"].ToString(), dr["email"].ToString(), dr["password"].ToString());
-                    lst.Add(u);
+                    nbUser++;
                 }
                 dr.Close();
-                Debug.WriteLine("selectAllUser worked");
+                if (nbUser > 0)
+                {
+                    result = true;
+                }
+                Debug.WriteLine("userExist worked");
 
             }
             catch (MySqlException ex)
@@ -112,7 +118,35 @@ namespace FavoriteDLL
                 Debug.WriteLine(ex.Message);
             }
             this.CloseConnection();
-            return lst;
+            return result;
+        }
+        public User selectUser(User u)
+        {
+            string query = "SELECT * FROM user WHERE email = @email AND password = @password";
+            List<User> lst = new List<User>();
+
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("email", u.email);
+                cmd.Parameters.AddWithValue("password", u.password);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    User user = new User(dr.GetInt32(0), dr["firstName"].ToString(), dr["lastName"].ToString(), dr["email"].ToString(), dr["password"].ToString());
+                    lst.Add(user);
+                }
+                dr.Close();
+                Debug.WriteLine("selectUser worked");
+
+            }
+            catch (MySqlException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            this.CloseConnection();
+            return lst[0];
         }
         // *** Folder querys ***
         public void insertFolder(Folder f)

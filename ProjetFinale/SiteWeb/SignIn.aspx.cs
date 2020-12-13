@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FavoriteDLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,12 +12,28 @@ namespace SiteWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void connexionUser(object sender, EventArgs e)
         {
+            if (Page.IsValid)
+            {
+                DBConnect db = new DBConnect();
+                User u = new User();
+                u.email = inputEmail.Text;
+                u.password = inputPassword.Text;
 
+                if (db.userExist(u))
+                {
+                    Session["connected"] = db.selectUser(u);
+                    Response.Redirect("AffichageFavoris.aspx");
+                }
+                else
+                {
+                    lblError.Text = "Mauvaise adresse courriel ou mot de passe";
+                }
+            }
         }
     }
 }

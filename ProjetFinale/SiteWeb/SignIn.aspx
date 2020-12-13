@@ -12,9 +12,14 @@
                     
                     <asp:TextBox ID="inputEmail" class="form-control" placeholder="Adresse courriel" runat="server"></asp:TextBox>
 
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="inputEmail" ErrorMessage="Veuillez entrer une adresse courriel" ForeColor="Red"></asp:RequiredFieldValidator>
+
                     <asp:TextBox ID="inputPassword" class="form-control" placeholder="Mot de passe" runat="server"></asp:TextBox>
 
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="inputPassword" ErrorMessage="Veuillez entrer un mot de passe" ForeColor="Red"></asp:RequiredFieldValidator>
+
                     <asp:Button ID="btnConnexion" runat="server" OnClick="connexionUser" Text="Connexion" class="w-100 btn btn-lg btn-primary"/>
+                    <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                 </form>
                 </main>
             </div>

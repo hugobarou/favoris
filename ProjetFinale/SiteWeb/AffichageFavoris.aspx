@@ -6,6 +6,7 @@
         
         <div class="row btn-row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <asp:Label ID="lblWelcome" runat="server"></asp:Label>
                 <button type="button" class="btn btn-pill btn-success btn-lg btn-add">
                     <i class="fas fa-plus"></i>
                     Ajouter un dossier
@@ -58,8 +59,7 @@
                 </a>
             </div>
 
-        <%--</div>--%>
-        <%--<div class="row folders-row">--%>
+        <%--</div>--%>        <%--<div class="row folders-row">--%>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <a href="google.com" class="clickable-card">
                     <div class="card">

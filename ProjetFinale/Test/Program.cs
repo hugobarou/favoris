@@ -67,11 +67,15 @@ namespace Test
             Console.WriteLine(json);
 
             DBConnect db = new DBConnect();
-            List<User> lst = db.selectAllUser();
-            foreach (User u in lst)
-            {
-                Console.WriteLine(u);
-            }
+            User hugo = new User();
+            hugo.email = "Hugo@hotmail.com";
+            hugo.password = "123456";
+
+            bool res = db.userExist(hugo);
+            Console.WriteLine(res);
+
+            User hugoinfo = db.selectUser(hugo);
+            Console.WriteLine(hugoinfo);
             User jc = new User();
             jc.id = 1;
 
