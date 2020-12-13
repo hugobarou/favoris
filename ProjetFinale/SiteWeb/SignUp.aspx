@@ -11,17 +11,9 @@
                         <img class="mb-4 sign-icon" src="https://static.thenounproject.com/png/736670-200.png">
                         <h1 class="h3 mb-3 fw-normal">Veuillez vous enregistrer</h1>
 
-                        <asp:Label ID="lblFirstName" class="visually-hidden" runat="server" Text="First name"></asp:Label>
                         <asp:TextBox ID="inputFirstName" class="form-control" placeholder="Prénom" runat="server"></asp:TextBox>
-
-                        <asp:Label ID="lblLastName" class="visually-hidden" runat="server" Text="Last name"></asp:Label>
                         <asp:TextBox ID="inputLastName" class="form-control" placeholder="Nom" runat="server"></asp:TextBox>
-
-                        <asp:Label ID="lblEmail" class="visually-hidden" runat="server" Text="Email address"></asp:Label>
                         <asp:TextBox ID="inputEmail" type="email" class="form-control" placeholder="Adresse courriel" runat="server"></asp:TextBox>
-
-                        <asp:Label ID="lblPassword" class="visually-hidden" runat="server" Text="Password"></asp:Label>
-
                         <asp:Button ID="btnCreateUser" runat="server" OnClick="createUser" Text="S'enregistrer" class="w-100 btn btn-lg btn-primary" />
                     </form>
                 </main>
