@@ -27,6 +27,7 @@ namespace SiteWeb
                 if (db.userExist(u))
                 {
                     Session["connected"] = db.selectUser(u);
+                    Session["folders"] = db.selectAllFolderByUser(u);
                     Response.Redirect("AffichageFavoris.aspx");
                 }
                 else
