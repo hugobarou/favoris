@@ -12,15 +12,20 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
     <form id="form1" runat="server">
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand">Favoris</a>
                 <div class="d-flex nav-items">
                     <a class="nav-link active" aria-current="page" href="Acceuil.aspx">Acceuil</a>
-                    <a class="nav-link active" aria-current="page" href="AffichageFavoris.aspx">Favoris</a>
-                    <a class="btn btn-outline-primary nav-item" href="SignUp.aspx">S'enregistrer</a>
-                    <a class="btn btn-outline-success nav-item" href="SignIn.aspx">Se connecter</a>
+                    <%--<a class="nav-link active" aria-current="page" href="AffichageFavoris.aspx">Favoris</a>--%>
+                    <%--<a class="btn btn-outline-primary nav-item" href="SignUp.aspx">S'enregistrer</a>--%>
+                    <asp:HyperLink ID="btnSignUp" class="btn btn-outline-primary nav-item" href="SignUp.aspx" runat="server" Text="S'enregister"></asp:HyperLink>
+                    <%--<asp:HyperLink ID="btnSignIn" class="btn btn-outline-success nav-item"  href="SignIn.aspx"  runat="server" Text="Se connecter"></asp:HyperLink>--%>
+                    <%--<a ID="btnSignIn" class="btn btn-outline-success nav-item" href="SignIn.aspx" visible="false">Se connecter</a>--%>
+                    <%--<asp:Button ID="btnSignIn" runat="server" class="btn btn-outline-success nav-item" Text="Se connecter" OnClick="BtnSignIn_Click"></asp:Button>--%>
+                    <asp:Button ID="Button1" runat="server" class="btn btn-outline-success nav-item" Text="Se connecter" OnClick="Button1_Click"/>
                 </div>
             </div>
         </nav>
@@ -34,5 +39,6 @@
             </div>
         </footer>
     </form>
+    </asp:ContentPlaceHolder>
 </body>
 </html>

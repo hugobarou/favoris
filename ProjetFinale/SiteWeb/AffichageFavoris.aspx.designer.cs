@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SiteWeb
-{
-
-
-    public partial class WebForm5
-    {
-
+namespace SiteWeb {
+    
+    
+    public partial class WebForm5 {
+        
         /// <summary>
         /// lblWelcome control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblWelcome;
-
+        
         /// <summary>
         /// btnAddFolder control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddFolder;
-
+        
         /// <summary>
         /// btnCxlFolderAdd control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCxlFolderAdd;
-
+        
         /// <summary>
         /// panelAddFolder control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelAddFolder;
-
+        
         /// <summary>
         /// btnMakeFolder control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnMakeFolder;
-
+        
         /// <summary>
         /// BtnMakeFav control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnMakeFav;
-
+        
         /// <summary>
         /// BtnCxlMakeFav control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnCxlMakeFav;
-
+        
         /// <summary>
         /// panelAddFav control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelAddFav;
-
+        
         /// <summary>
         /// BtnAddFav control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnAddFav;
-
+        
         /// <summary>
         /// CheckBox1 control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
-
+        
         /// <summary>
         /// CheckBox2 control.
         /// </summary>
@@ -112,7 +110,7 @@ namespace SiteWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
-
+        
         /// <summary>
         /// CheckBox3 control.
         /// </summary>

@@ -47,5 +47,7 @@ namespace SiteWeb
             BtnMakeFav.Visible = true;
             panelAddFav.Visible = false;
         }
+
+
     }
 }
