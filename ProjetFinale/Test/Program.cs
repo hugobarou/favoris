@@ -22,7 +22,17 @@ namespace Test
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            User user = new User();
+            DBConnect db = new DBConnect();
+            User test = new User();
+            test.id = 1;
+
+            List<Folder> lstFolder = db.selectAllFolderByUser(test);
+
+            foreach(Folder f in lstFolder)
+            {
+                Console.WriteLine(f);
+            }
+            /*User user = new User();
             user.id = 1;
             user.firstName = "Hugo";
             user.lastName = "Barou";
@@ -77,12 +87,13 @@ namespace Test
             User hugoinfo = db.selectUser(hugo);
             Console.WriteLine(hugoinfo);
             User jc = new User();
-            jc.id = 1;
+            jc.id = 2;
 
-            List<Folder> lstFolder =  db.selectAllFolderByUser(jc);
+            List<Folder> lstFolder =  (List<Folder>)db.selectAllFolderByUser(jc);
             foreach (Folder f in lstFolder)
             {
                 Console.WriteLine(f);
+                Console.WriteLine("test");
             }
 
             Folder test = new Folder();
@@ -111,7 +122,7 @@ namespace Test
 
             fol.id = 2;
             fol.name = "C'EST VRAIMENT TROP COOL LA PROGRAMMATION";
-            db.updateFolder(fol);
+            db.updateFolder(fol);*/
         }
     }
 }
